@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.title-item{
+    font-size: 24px;
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.year-item{
+    font-size: 18px;
+    color: rgb(96,186,238);
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.img-item{
+    width: 450px;
+    height: 525px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.movieButton{
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(23, 25, 68);
+}
+
+.error{
+    display: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1300px) {
+    .title-item{
+        font-size: 24px;
+        font-weight: bold;
+        width: 40%;
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    #searchBar{
+        width: 50%;
+    }
+  }
+
+@media screen and (max-width: 1180px) {
+    .searchButtons,
+    .yearValue{
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .title-item{
+        font-size: 24px;
+        font-weight: bold;
+        width: 80%;
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}

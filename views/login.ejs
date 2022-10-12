@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://img.favpng.com/22/1/8/film-reel-png-favpng-Hcq47JmJKi7GqpR9qCRWU7CvC.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="/public/css/style.css" rel="stylesheet">
+    <title>Movie Tracker</title>
+</head>
+<body>
+        <div class="">
+            <h1 class="text-8xl text-center mt-32 mb-10">Movie Tracker</h1>
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="block w-fit m-auto alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="block w-fit m-auto alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+        </div>
+            <div class="flex-col border-white border-2 rounded-xl w-1/4 p-10 m-auto">
+                <form action="/login" method="POST" autocomplete="off">
+                    <input type="email" name="email" placeholder="Email" class="flex my-5 p-3 m-auto w-4/5">
+                    <input type="password" name="password" placeholder="Password" class="flex my-5 p-3 m-auto w-4/5">
+                    <input type="submit" value="Sign-In" class="btn flex my-5 m-auto">
+                </form>
+                <span class="block w-fit m-auto">Don't have an account? <a class="m-auto" id="register" href="/signup">Register</a></span>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>
+

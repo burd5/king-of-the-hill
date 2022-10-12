@@ -1,0 +1,66 @@
+<%- include ('partials/header') -%>
+<h1 id="profile" class="text-center text-5xl border-2 border-primary rounded-xl w-fit my-10 m-auto p-5"><%= userName %>'s list</h1>
+
+<div class="overflow-x-auto w-full">
+    <table class="table w-3/4 m-auto">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Rating</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr>
+          <% for(let i=0; i < movies.length; i++) {%>
+          <td><a class="text-xl text-primary underline underline-offset-4" href="<%= movies[i].imdb %>"><%= movies[i].title %></a></td>
+          <td class="text-xl">
+            <%= movies[i].year %>
+          </td>
+
+          <% if(movies[i].rating == null) {%>
+          <td><a href="#my-modal-2"><i class="btn fa fa-plus"></i></a></td>
+          <div class="modal" id="my-modal-2">
+            <div class="modal-box">
+              <a href='#profile'><i class="btn fa fa-close absolute top-1 right-1"></i></a>
+              <h3 class="font-bold text-xl text-center mb-5">Please enter a rating for the movie</h3>
+              <form action="/addRating/<%= movies[i]._id %>?_method=PUT" method="POST">
+                <input type="number" step=".01" min="0" max="10" name="rating" class="block m-auto  w-1/2 p-3">
+                <button class="btn block m-auto mt-5" type="Submit">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <%} else {%>
+          <td>
+              <%= movies[i].rating %>
+          </td>
+          <% } %>
+          <td>
+            <form action="/deleteMovie/<%= movies[i]._id %>?_method=DELETE" method="POST">
+              <button type="submit"><i class="btn fa fa-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>     
+    </table>
+  </div>
+
+  <!--Modal for movie rating-->
+  <% for(let i=0; i < movies.length; i++) {%>
+  <div class="modal" id="my-modal-2">
+    <div class="modal-box">
+      <a href='#profile'><i class="btn fa fa-close absolute top-1 right-1"></i></a>
+      <h3 class="font-bold text-xl text-center mb-5">Please enter a rating for the movie</h3>
+      <form action="/addRating/<%= movies[i]._id %>?_method=PUT" method="POST">
+        <input type="number" step=".01" min="0" max="10" name="rating" class="block m-auto  w-1/2 p-3">
+        <button class="btn block m-auto mt-5" type="Submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <% } %>
+
+<%- include ('partials/footer') -%>
