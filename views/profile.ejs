@@ -20,7 +20,7 @@
             <%= movies[i].year %>
           </td>
 
-          <% if(movies[i].rating == null) {%>
+          <% if(movies[i].rating == 0) {%>
           <td><a href="#my-modal-2"><i class="btn fa fa-plus"></i></a></td>
           <div class="modal" id="my-modal-2">
             <div class="modal-box">
@@ -28,12 +28,12 @@
               <h3 class="font-bold text-xl text-center mb-5">Please enter a rating for the movie</h3>
               <form action="/addRating/<%= movies[i]._id %>?_method=PUT" method="POST">
                 <input type="number" step=".01" min="0" max="10" name="rating" class="block m-auto  w-1/2 p-3">
-                <button class="btn block m-auto mt-5" type="Submit">Submit</button>
+                <button class="btn block m-auto mt-5" type="submit">Submit</button>
               </form>
             </div>
           </div>
-
           <%} else {%>
+      
           <td>
               <%= movies[i].rating %>
           </td>

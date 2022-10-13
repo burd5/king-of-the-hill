@@ -65,7 +65,7 @@ app.post('/addMovie', async (request, response) => {
         title: request.body.movieTitle,
         year: request.body.movieYear,
         imdb: request.body.imdb,
-        rating: request.body.rating,
+        rating: 0,
         user: request.user._id
       })
       .then(() => {

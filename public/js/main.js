@@ -79,6 +79,7 @@ async function addToList(e,req){
 
     let button = await await e.target.parentNode.children[4]
     button.style.backgroundColor = 'rgb(96,186,238)'
+    button.style.color = 'white'
     button.innerHTML = 'Added'
         
     try {
