@@ -1,1 +1,48 @@
 <%- include ('partials/header') -%>
+
+<div class="text-center">
+<div class="text-lg font-medium text-gray-500 dark:text-gray-400 dark:border-gray-700 inline-block mb-10">
+    <ul class="flex flex-wrap">
+        <li class="mr-2">
+            <a href="#findMovie" class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Find a Movie</a>
+        </li>
+        <li>
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Find a Cafe</a>
+        </li>
+        <li>
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Find a Diner</a>
+        </li>
+        <li class="mr-2">
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Add a Movie</a>
+        </li>
+        <li class="mr-2">
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Add a Cafe</a>
+        </li>
+        <li class="mr-2">
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Add a Diner</a>
+        </li>
+    </ul>
+</div>
+
+<div id="findMovie">
+<div id="searchBar" class="w-3/5 m-auto text-center text-3xl rounded-xl">  
+    
+    <h2 class="text-center my-5">Search for a Movie</h2>
+    <p class="text-base text-secondary">Refresh the queue before making a new search</p>
+    <input type="text" placeholder="Title" name="movieTitle" class="input max-w-xs my-5 movieValue text-2xl border-1 border-primary"/>
+    <input type="number" placeholder="Year" class="input max-w-xs yearValue text-2xl  border-1 border-primary"/>
+    <div class="searchButtons inline">
+        <button class="btn text-lg my-5 mr-3 ml-3 findMovies">Search</button>
+        <button class="btn text-lg mb-5 refresh fa fa-refresh"></button>
+    </div>
+    <span class="mx-2 my-2 text-lg text-center text-red-600 error">Error: Search is too vague. Please refresh the queue and try again.</span>
+</div>
+
+<div id="movieQuery" class="justify-around flex flex-wrap my-10 w-3/4 m-auto">
+    
+</div>
+</div>
+</div>
+
+<%- include ('partials/footer') -%>
+

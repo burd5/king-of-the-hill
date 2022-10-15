@@ -10,6 +10,7 @@ const logger = require('morgan')
 const connectDB = require('./config/database')
 const methodOverride = require('method-override')
 const mainRoutes = require('./routes/main')
+const { addRating } = require('./controllers/main')
 
 require('dotenv').config({path: './config/.env'})
 
@@ -65,8 +66,7 @@ app.post('/addMovie', async (request, response) => {
         title: request.body.movieTitle,
         year: request.body.movieYear,
         imdb: request.body.imdb,
-        rating: 0,
-        user: request.user._id
+        user: request.user._id,
       })
       .then(() => {
         console.log(`${request.body.movieTitle} - Added to Playlist`);

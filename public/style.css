@@ -46,6 +46,26 @@
     display: none;
 }
 
+.card{
+    height: 450px;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.collectionImg{
+    height: 300px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.collections{
+    font-size: 40px;
+}
+
+.king{
+    font-size: 48px;
+}
 
 /* Media Queries */
 

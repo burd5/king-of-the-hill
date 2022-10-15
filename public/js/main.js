@@ -74,10 +74,10 @@ async function addToList(e,req){
     const movieTitle = await e.target.parentNode.firstChild.innerText
     const movieYear = await e.target.parentNode.children[1].innerText
     const imdb = await e.target.parentNode.children[3].href
+    
     console.log(imdb, movieYear, movieTitle)
-    const rating = null
 
-    let button = await await e.target.parentNode.children[4]
+    let button = await e.target.parentNode.children[4]
     button.style.backgroundColor = 'rgb(96,186,238)'
     button.style.color = 'white'
     button.innerHTML = 'Added'
@@ -90,7 +90,6 @@ async function addToList(e,req){
             movieTitle: movieTitle,
             movieYear: movieYear,
             imdb: imdb,
-            rating: rating
           }),
         });
         const data = await response.json();

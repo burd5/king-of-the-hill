@@ -12,8 +12,11 @@ router.post('/signup', authController.postSignup)
 
 // Main Controller
 router.get('/', mainController.getLogin)
-router.get('/index', mainController.getIndex)
-router.get('/profile', mainController.getProfile)
+router.get('/add', mainController.getAdd)
+router.get('/collections', mainController.getCollections)
+router.get('/movies', mainController.getMovies)
+router.get('/diners', mainController.getDiners)
+router.get('/cafes', mainController.getCafes)
 router.put('/addRating/:id', mainController.addRating)
 router.delete('/deleteMovie/:id', mainController.deleteMovie)
 

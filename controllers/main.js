@@ -20,11 +20,40 @@ module.exports = {
             console.log(err)
         }
     },
-    getProfile: async (req,res)=>{
+    getAdd: async (req,res)=>{
+        try {
+            res.render('add.ejs')
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    getCollections: async (req,res)=>{
+        try {
+            let userItems = await User.find({user: req.user._id})
+            res.render('collections.ejs', {user: userItems, userName: req.user.userName})
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    getMovies: async (req,res)=>{
         try {
             let userItems = await User.find({user: req.user._id})
             let movies = await Movie.find({user: req.user.id}).sort({rating: '-1'})
-            res.render('profile.ejs', {user: userItems, userName: req.user.userName, movies: movies, user: req.user.id})
+            res.render('movies.ejs', {user: userItems, userName: req.user.userName, movies: movies, user: req.user.id})
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    getCafes: async (req,res)=>{
+        try {
+            res.render('cafes.ejs')
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    getDiners: async (req,res)=>{
+        try {
+            res.render('diners.ejs')
         } catch (err) {
             console.log(err)
         }
@@ -34,17 +63,18 @@ module.exports = {
             //Find book by id
             await Movie.findOneAndDelete({_id:req.params.id})
             console.log('Deleted Movie')
-            res.redirect('/profile')
+            res.redirect('/movies')
         }catch(err){
             console.log(err)
         }
     },
     addRating: async (req,res) =>{
         try {
-            await Movie.findOneAndUpdate({_id:req.params.id},
+            await Movie.findOneAndUpdate({_id: req.params.id},
                 {rating: req.body.rating})
             console.log('Added Rating')
-            res.redirect('/profile')
+            console.log(req.params.id)
+            res.redirect('/movies')
         } catch (err) {
             console.log(err)
         }

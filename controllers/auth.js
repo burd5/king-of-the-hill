@@ -38,7 +38,7 @@ module.exports = {
           if (err) { return next(err) }
           req.flash('success', { msg: 'Success! You are logged in.' })
           const userItems = await User.find({user: req.user.id})
-          res.render('index.ejs', {user: userItems, userName: req.user.userName})
+          res.render('collections.ejs', {user: userItems, userName: req.user.userName})
         })
       })(req, res, next)
     },
@@ -95,7 +95,7 @@ module.exports = {
               return next(err)
             }
           const userItems = await User.find({user: req.user.id})
-          res.render('index.ejs', {user: userItems, userName: req.user.userName})
+          res.render('collections.ejs', {user: userItems, userName: req.user.userName})
           })
         })
       })
