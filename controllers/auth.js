@@ -47,7 +47,7 @@ module.exports = {
           let movieKing = movies[0]
           let dinerKing = diners[0]
           let cafeKing = cafes[0]
-          res.render('collections.ejs', {user: userItems, userName: req.user.userName, movieKing: movieKing, dinerKing: dinerKing, cafeKing: cafeKing})
+          res.render('collections.ejs', {user: userItems, userName: req.user.userName, movies: movies, diners: diners, cafes: cafes, movieKing: movieKing, dinerKing: dinerKing, cafeKing: cafeKing})
         })
       })(req, res, next)
     },

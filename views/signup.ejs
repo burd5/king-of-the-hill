@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="night">
+<html lang="en" data-theme="luxury">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 </head>
 <body class="login-body">
     <div class="">
-        <h1 class="text-8xl text-center mt-32 mb-10">Movie Tracker</h1>
+        <h1 class="text-8xl text-center mt-32 mb-10">King of the Hill</h1>
         <% if (locals.messages.errors) { %>
             <% messages.errors.forEach( el => { %>
                 <div class="block w-fit m-auto alert alert-danger"><%= el.msg %></div>
@@ -25,6 +25,7 @@
         <% } %>
     </div>
         <div class="flex-col border-white border-2 rounded-xl w-1/4 p-10 m-auto">
+            <div class="text-center"><i class="fa fa-crown text-6xl"></i></div>
             <form action="/signup" method="POST" autocomplete="off">
                 <input type="text" name="userName" placeholder="Username" class="flex my-5 p-3 m-auto w-4/5">
                 <input type="email" name="email" placeholder="Email" class="flex my-5 p-3 m-auto w-4/5">

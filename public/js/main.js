@@ -78,7 +78,7 @@ async function addToList(e,req){
     console.log(imdb, movieYear, movieTitle)
 
     let button = await e.target.parentNode.children[4]
-    button.style.backgroundColor = 'rgb(96,186,238)'
+    button.style.backgroundColor = 'rgb(199,155,85)'
     button.style.color = 'white'
     button.innerHTML = 'Added'
         

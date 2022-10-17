@@ -38,7 +38,7 @@ module.exports = {
             let movieKing = movies[0]
             let dinerKing = diners[0]
             let cafeKing = cafes[0]
-            res.render('collections.ejs', {user: userItems, userName: req.user.userName, movieKing: movieKing, dinerKing: dinerKing, cafeKing: cafeKing})
+            res.render('collections.ejs', {user: userItems, userName: req.user.userName, movies: movies, diners: diners, cafes: cafes, movieKing: movieKing, dinerKing: dinerKing, cafeKing: cafeKing})
         } catch (err) {
             console.log(err)
         }
@@ -111,7 +111,7 @@ module.exports = {
             console.log(err)
         }
     },
-    addMovie: async (req,res) =>{
+    addMovieManual: async (req,res) =>{
         try {
             let userItems = await User.find({user: req.user._id})
             await Movie.create({title: req.body.title, year: req.body.year, rating: req.body.rating, user: req.user.id})

@@ -15,7 +15,7 @@
 
 .year-item{
     font-size: 18px;
-    color: rgb(96,186,238);
+    color: white;
     width: 50%;
     text-align: center;
     display: block;
@@ -70,7 +70,6 @@
 .tabs{
     justify-content: space-around;
     margin-top: 20px;
-    border: 2px solid rgb(97,190,243);
     border-radius: 10px;
     width: fit-content;
     margin: auto;
@@ -87,7 +86,6 @@
 
 .tab:hover{
     background: #fff;
-    color: rgb(97,190,243);
 }
 
 .findMovieTab{

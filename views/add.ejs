@@ -1,20 +1,20 @@
 <%- include ('partials/header') -%>
 
-<div class="text-center text-5xl text-secondary">
+<div class="text-center text-5xl mb-5">
     <h3>Add a List Item</h3>
 </div>
 
-    <ul class="tabs flex flex-row border-secondary">
+    <ul class="tabs flex flex-row border-primary border-2">
             <li class="tab addMovieTab"><a href="#addMovie">Add a Movie</a></li>
+            <li class="tab findMovieTab"><a href="#findMovie">Find a Movie</a></li>
             <li class="tab addCafeTab"><a href="#addCafe">Add a Cafe</a></li>
             <li class="tab addDinerTab"><a href="#addDiner">Add a Diner</a></li>
-            <li class="tab findMovieTab"><a href="#findMovie">Find a Movie</a></li>
     </ul>
 
 
     <div id="addMovie" class="text-center">
         <h3 class="text-3xl my-5 text-primary">Movies</h3>
-        <form action="/addMovie" method="POST" class="">
+        <form action="/addMovieManual" method="POST" class="">
 
                 <div class="flex flex-col">
                     <label for="title">Title</label>
@@ -33,7 +33,7 @@
             
 
             <div class="row">
-                <input id="save" type="submit" value="Submit" class="btn my-5"></input>
+                <input id="save" type="submit" value="Submit" class="btn btn-ghost my-5"></input>
             </div>
 
         </form>
@@ -100,10 +100,10 @@
 <div id="findMovie">
     <div id="searchBar" class="w-3/5 m-auto text-center text-3xl rounded-xl">  
         
-        <h2 class="text-center my-5">Search for a Movie</h2>
-        <p class="text-base text-secondary">Refresh the queue before making a new search</p>
-        <input type="text" placeholder="Title" name="movieTitle" class="input max-w-xs my-5 movieValue text-2xl border-1 border-primary"/>
-        <input type="number" placeholder="Year" class="input max-w-xs yearValue text-2xl  border-1 border-primary"/>
+        <h2 class="text-center text-primary my-5">Search for a Movie</h2>
+        <p class="text-base text-xl">Refresh the queue before making a new search</p>
+        <input type="text" placeholder="Title" name="movieTitle" class="input max-w-xs my-5 movieValue text-2xl"/>
+        <input type="number" placeholder="Year" class="input max-w-xs yearValue text-2xl"/>
         <div class="searchButtons inline">
             <button class="btn text-lg my-5 mr-3 ml-3 findMovies">Search</button>
             <button class="btn text-lg mb-5 refresh fa fa-refresh"></button>
