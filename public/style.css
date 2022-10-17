@@ -47,7 +47,7 @@
 }
 
 .card{
-    height: 450px;
+    height: auto;
     width: 30%;
     text-align: center;
     margin: 0 auto;
@@ -60,11 +60,54 @@
 }
 
 .collections{
-    font-size: 40px;
+    font-size: 48px;
 }
 
 .king{
     font-size: 48px;
+}
+
+.tabs{
+    justify-content: space-around;
+    margin-top: 20px;
+    border: 2px solid rgb(97,190,243);
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.tab{
+    margin-right: 30px;
+    font-size: 24px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.tab:hover{
+    background: #fff;
+    color: rgb(97,190,243);
+}
+
+.findMovieTab{
+    margin-right: 10px;
+}
+
+.addMovieTab{
+    margin-left: 10px;
+}
+
+form input{
+    width: 20%;
+    margin: auto;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 24px;
+}
+form label{
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 /* Media Queries */

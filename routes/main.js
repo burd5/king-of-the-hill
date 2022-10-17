@@ -17,8 +17,15 @@ router.get('/collections', mainController.getCollections)
 router.get('/movies', mainController.getMovies)
 router.get('/diners', mainController.getDiners)
 router.get('/cafes', mainController.getCafes)
-router.put('/addRating/:id', mainController.addRating)
+router.put('/addMovieRating/:id', mainController.addMovieRating)
+router.post('/addMovie', mainController.addMovie)
+router.post('/addCafe', mainController.addCafe)
+router.post('/addDiner', mainController.addDiner)
 router.delete('/deleteMovie/:id', mainController.deleteMovie)
+router.delete('/deleteDiner/:id', mainController.deleteDiner)
+router.delete('/deleteCafe/:id', mainController.deleteCafe)
+
+
 
 
 

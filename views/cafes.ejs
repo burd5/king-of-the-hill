@@ -1,5 +1,49 @@
 <%- include ('partials/header') -%>
 
-<h1 class="text-center text-3xl text-secondary border-2 border-primary rounded-xl w-fit my-10 m-auto p-5">Cafe's List</h1>
+<h1 class="text-center text-3xl text-secondary border-2 border-primary rounded-xl w-3/4 my-10 m-auto p-5">Cafe's List</h1>
+
+<a href="/add"><button class="block m-auto"><i class="btn text-3xl fa fa-plus mb-5"></i></button></a>
+
+<div class="overflow-x-auto w-full mb-10">
+    <table class="table w-3/4 m-auto">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Rating</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% for(let i=0; i < cafes.length; i++) {%>
+          <td class="text-xl"><%= cafes[i].name %></td>
+          <td class="text-xl">
+            <%= cafes[i].location %>
+          </td>
+          <% if(cafes[i].rating == null) {%>
+          <td>
+            <div>
+              <form action="/addCafeRating/<%=cafes[i]._id%>?_method=PUT" method="POST">
+                <input type="number" step=".01" min="0" max="10" name="rating" class="m-auto w-1/4 p-3 text-xs">
+                <button class="fa fa-check btn m-auto" type="Submit"></button>
+                </form>
+            </div>
+          </td>
+          <%} else {%>
+          <td class="text-xl">
+              <%= cafes[i].rating %>
+          </td>
+          <% } %>
+          <td>
+            <form action="/deleteCafe/<%= cafes[i]._id %>?_method=DELETE" method="POST">
+              <button type="submit"><i class="btn fa fa-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>     
+    </table>
+  </div>
 
 <%- include ('partials/footer') -%>

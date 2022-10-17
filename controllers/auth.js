@@ -1,6 +1,9 @@
 const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
+const Movie = require('../models/Movie')
+const Diner = require('../models/Diners')
+const Cafe = require('../models/Cafes')
 
 // Methods - routed from main.js 
 module.exports = {
@@ -38,7 +41,13 @@ module.exports = {
           if (err) { return next(err) }
           req.flash('success', { msg: 'Success! You are logged in.' })
           const userItems = await User.find({user: req.user.id})
-          res.render('collections.ejs', {user: userItems, userName: req.user.userName})
+          let movies = await Movie.find({user: req.user.id}).sort({rating: '-1'})
+          let cafes = await Cafe.find({user: req.user.id}).sort({rating: '-1'})
+          let diners = await Diner.find({user: req.user.id}).sort({rating: '-1'})
+          let movieKing = movies[0]
+          let dinerKing = diners[0]
+          let cafeKing = cafes[0]
+          res.render('collections.ejs', {user: userItems, userName: req.user.userName, movieKing: movieKing, dinerKing: dinerKing, cafeKing: cafeKing})
         })
       })(req, res, next)
     },

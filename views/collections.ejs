@@ -1,20 +1,26 @@
 <%- include ('partials/header') -%>
 
-<h1 class="collections text-center text-secondary mb-10 mt-5">Collections</h1>
+<h1 class="collections text-center text-primary mb-10 mt-5">Collections</h1>
 
 <div>
     <ul class="flex flex-row justify-around">
         <li class="card p-3 movies">
             <a href="/movies"><h3 class="text-center text-3xl border-2 border-primary rounded-xl my-2 m-auto p-5">Movies</h3>
             <img class="collectionImg" src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1517845732/1517845731.jpg" alt=""></a>
+            <i class="fa fa-crown text-3xl mt-5"></i>
+            <span class="text-3xl"><%= movieKing.title %></span>
         </li>
         <li class="card p-3 diners">
             <a href="/diners"><h3 class="text-center text-3xl border-2 border-primary rounded-xl my-2 m-auto p-5">Diners</h3>
             <img class="collectionImg" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/West_Side_Diner_Providence_RI.jpg" alt=""></a>
+            <i class="fa fa-crown text-3xl mt-5"></i>
+            <span class="text-3xl"><%= dinerKing.name %></span>
         </li>
         <li class="card p-3 cafes">
             <a href="/cafes"><h3 class="text-center text-3xl border-2 border-primary rounded-xl my-2 m-auto p-5">Cafes</h3>
             <img class="collectionImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRInHs08ijUAsvB5GJ-4G_vVZW4FBz1myl3FQ&usqp=CAU" alt=""></a>
+            <i class="fa fa-crown text-3xl mt-5"></i>
+            <span class="text-3xl"><%= cafeKing.name %></span>
         </li>
     </ul>
 </div>

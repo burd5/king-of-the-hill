@@ -1,48 +1,129 @@
 <%- include ('partials/header') -%>
 
-<div class="text-center">
-<div class="text-lg font-medium text-gray-500 dark:text-gray-400 dark:border-gray-700 inline-block mb-10">
-    <ul class="flex flex-wrap">
-        <li class="mr-2">
-            <a href="#findMovie" class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Find a Movie</a>
-        </li>
-        <li>
-            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Find a Cafe</a>
-        </li>
-        <li>
-            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Find a Diner</a>
-        </li>
-        <li class="mr-2">
-            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Add a Movie</a>
-        </li>
-        <li class="mr-2">
-            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Add a Cafe</a>
-        </li>
-        <li class="mr-2">
-            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Add a Diner</a>
-        </li>
-    </ul>
+<div class="text-center text-5xl text-secondary">
+    <h3>Add a List Item</h3>
 </div>
+
+    <ul class="tabs flex flex-row border-secondary">
+            <li class="tab addMovieTab"><a href="#addMovie">Add a Movie</a></li>
+            <li class="tab addCafeTab"><a href="#addCafe">Add a Cafe</a></li>
+            <li class="tab addDinerTab"><a href="#addDiner">Add a Diner</a></li>
+            <li class="tab findMovieTab"><a href="#findMovie">Find a Movie</a></li>
+    </ul>
+
+
+    <div id="addMovie" class="text-center">
+        <h3 class="text-3xl my-5 text-primary">Movies</h3>
+        <form action="/addMovie" method="POST" class="">
+
+                <div class="flex flex-col">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="author">Year</label>
+                    <input type="number" id="year" name="year">
+                </div>
+            
+                <div class="flex flex-col">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" step=".01" min="0" max="10" autocomplete="off">
+                </div>
+            
+
+            <div class="row">
+                <input id="save" type="submit" value="Submit" class="btn my-5"></input>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="addCafe" class="text-center">
+        <h3 class="text-3xl my-5 text-primary">Cafes</h3>
+        <form action="/addCafe" method="POST" class="border-1">
+
+                <div class="flex flex-col">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+            
+
+            
+                <div class="flex flex-col">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" step=".01" min="0" max="10" autocomplete="off">
+                </div>
+            
+
+            <div class="row">
+                <input id="save" type="submit" value="Submit" class="btn my-5"></input>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="addDiner" class="text-center">
+        <h3 class="text-3xl my-5 text-primary">Diners</h3>
+        <form action="/addDiner" method="POST" class="border-1">
+
+                <div class="flex flex-col">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+            
+
+            
+                <div class="flex flex-col">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" step=".01" min="0" max="10" autocomplete="off">
+                </div>
+            
+
+            <div class="row">
+                <input id="save" type="submit" value="Submit" class="btn my-5"></input>
+            </div>
+
+        </form>
+    </div>
 
 <div id="findMovie">
-<div id="searchBar" class="w-3/5 m-auto text-center text-3xl rounded-xl">  
-    
-    <h2 class="text-center my-5">Search for a Movie</h2>
-    <p class="text-base text-secondary">Refresh the queue before making a new search</p>
-    <input type="text" placeholder="Title" name="movieTitle" class="input max-w-xs my-5 movieValue text-2xl border-1 border-primary"/>
-    <input type="number" placeholder="Year" class="input max-w-xs yearValue text-2xl  border-1 border-primary"/>
-    <div class="searchButtons inline">
-        <button class="btn text-lg my-5 mr-3 ml-3 findMovies">Search</button>
-        <button class="btn text-lg mb-5 refresh fa fa-refresh"></button>
+    <div id="searchBar" class="w-3/5 m-auto text-center text-3xl rounded-xl">  
+        
+        <h2 class="text-center my-5">Search for a Movie</h2>
+        <p class="text-base text-secondary">Refresh the queue before making a new search</p>
+        <input type="text" placeholder="Title" name="movieTitle" class="input max-w-xs my-5 movieValue text-2xl border-1 border-primary"/>
+        <input type="number" placeholder="Year" class="input max-w-xs yearValue text-2xl  border-1 border-primary"/>
+        <div class="searchButtons inline">
+            <button class="btn text-lg my-5 mr-3 ml-3 findMovies">Search</button>
+            <button class="btn text-lg mb-5 refresh fa fa-refresh"></button>
+        </div>
+        <span class="mx-2 my-2 text-lg text-center text-red-600 error">Error: Search is too vague. Please refresh the queue and try again.</span>
     </div>
-    <span class="mx-2 my-2 text-lg text-center text-red-600 error">Error: Search is too vague. Please refresh the queue and try again.</span>
+    
+    <div id="movieQuery" class="justify-around flex flex-wrap my-10 w-3/4 m-auto">
+        
+    </div>
 </div>
 
-<div id="movieQuery" class="justify-around flex flex-wrap my-10 w-3/4 m-auto">
-    
-</div>
-</div>
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const myTabs = document.querySelectorAll('.tabs');
+    M.Tabs.init(myTabs);
+  });
+</script>
 
 <%- include ('partials/footer') -%>
 
