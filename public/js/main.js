@@ -15,7 +15,7 @@ async function getMovie() {
     let movieId = [];
     let errors = document.querySelector('.error')
     try {
-    await fetch(`http://www.omdbapi.com/?&apikey=7462e3b8&s=${movie}&y=${year}`)
+    await fetch(`https://www.omdbapi.com/?&apikey=7462e3b8&s=${movie}&y=${year}`)
           .then((res) => res.json())
           .then((data) => {
               for(let i = 0; i < data.Search.length - 1; i++){
