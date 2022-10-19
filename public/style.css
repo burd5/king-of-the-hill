@@ -145,7 +145,8 @@ form label{
         margin-bottom: 10px;
     }
 
-    .login{
-        width: 100%;
+    .loginForm{
+        width: 75%;
+        margin: 0;
     }
 }
