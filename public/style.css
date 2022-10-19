@@ -144,4 +144,8 @@ form label{
         margin: auto;
         margin-bottom: 10px;
     }
+
+    .login{
+        width: 100%;
+    }
 }
