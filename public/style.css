@@ -140,11 +140,6 @@ form label{
         margin-bottom: 10px;
     }
 
-    .loginForm{
-        width: 100%;
-        margin: 0;
-    }
-
     .collectionsCol{
         display: flex;
         flex-direction:column;

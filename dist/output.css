@@ -3298,6 +3298,10 @@ input[type="range"]::-ms-fill-lower {
   width: fit-content;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-4\/5 {
   width: 80%;
 }
@@ -3600,11 +3604,6 @@ form label{
     display: block;
     margin: auto;
     margin-bottom: 10px;
-  }
-
-  .loginForm{
-    width: 100%;
-    margin: 0;
   }
 
   .collectionsCol{
