@@ -3581,12 +3581,6 @@ form label{
   #searchBar{
     width: 50%;
   }
-
-  .collectionsCol{
-    display: flex;
-    flex-direction:column;
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 1180px) {
@@ -3611,5 +3605,16 @@ form label{
   .loginForm{
     width: 100%;
     margin: 0;
+  }
+
+  .collectionsCol{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .card{
+    width: 90%;
   }
 }
