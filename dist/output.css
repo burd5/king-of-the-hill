@@ -3581,6 +3581,12 @@ form label{
   #searchBar{
     width: 50%;
   }
+
+  .collectionsCol{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1180px) {
