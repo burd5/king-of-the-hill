@@ -68,18 +68,15 @@
 
 .tabs{
     justify-content: space-around;
-    margin-top: 20px;
     border-radius: 10px;
     width: fit-content;
     margin: auto;
-    margin-top: 15px;
     padding: 5px;
 }
 
 .tab{
     margin-right: 30px;
     font-size: 24px;
-    padding: 15px;
     font-weight: bold;
 }
 
@@ -87,11 +84,11 @@
     background: #fff;
 }
 
-.findMovieTab{
+.addDinerTab{
     margin-right: 10px;
 }
 
-.addMovieTab{
+.findMovieTab{
     margin-left: 10px;
 }
 

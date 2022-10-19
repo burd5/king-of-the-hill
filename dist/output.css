@@ -3474,7 +3474,6 @@ input[type="range"]::-ms-fill-lower {
 
 .year-item{
   font-size: 18px;
-  color: white;
   width: 50%;
   text-align: center;
   display: block;
@@ -3532,14 +3531,12 @@ input[type="range"]::-ms-fill-lower {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-top: 15px;
   padding: 5px;
 }
 
 .tab{
   margin-right: 30px;
   font-size: 24px;
-  padding: 15px;
   font-weight: bold;
 }
 
@@ -3547,11 +3544,11 @@ input[type="range"]::-ms-fill-lower {
   background: #fff;
 }
 
-.findMovieTab{
+.addDinerTab{
   margin-right: 10px;
 }
 
-.addMovieTab{
+.findMovieTab{
   margin-left: 10px;
 }
 
