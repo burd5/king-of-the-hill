@@ -20,7 +20,7 @@ session, mongoose, passport, passport-local, bcrypt, validator, morgon, nodemon,
 
 <h1>Optimizations:</h1>
 
-There are many things that still need to be tweaked on this app. The biggest optimization is allowing users to add new collections. Allowing a user to create a new rank list and the criteria to be tracked for each list member. Some other things include:
+There are many things that still need to be tweaked on this app. The biggest optimization is allowing users to add new collections. Allowing a user to create a new rank list and the criteria to be tracked for each list item. Some other things include:
 
 - fixing the client side Javascript (bad baddddd code)
 - adding a modal button for users who add a movie using the API (instead of the current form that is inside the table)
