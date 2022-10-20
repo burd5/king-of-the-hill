@@ -2,7 +2,9 @@
 
 <img src="kingofthehill.gif" alt="gif of webpage" href="https://kingofthehill.cyclic.app/">
 
-<p color='red'>** WARNING - this repo contains some ugly code. Proceed with caution **</p>
+```diff
+-** WARNING - this repo contains some ugly code. Proceed with caution **
+```
 
 King of the Hill is a full stack web application that allows user to keep track of the "king" based on their personal interests. The original app was created to keep track of movies, cafes, and diners. Users can add items to their list and see a ranking of where each spot stands. The current "king" is shown on the main page underneath each collection.
 
@@ -23,6 +25,8 @@ There are many things that still need to be tweaked on this app. The biggest opt
 - fixing the client side Javascript (bad baddddd code)
 - adding a modal button for users who add a movie using the API (instead of the current form that is inside the table)
 - getting the Tailwind CSS and Daisy UI installed with the project. Right now I am using CDN script tags (a big no no for production, I know) because after weeks of trying to get it to work, I had to move on. 
+- connecting Google Maps or another API to search for cafes, diners, and other locations
+- allow users to create a profile where they can highlight their 'kings'
 
 <h1>Lessons Learned:</h1>
 
