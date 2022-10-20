@@ -152,14 +152,53 @@ form label{
     }
 }
 
+#addRatingForm input{
+    width: 100px !important;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 1000px) {
     .collectionsCol{
         display: flex !important;
         flex-direction: column !important;
         width: 90% !important;
+        margin: 0 auto !important;
     }
 
     .card{
         width: 90% !important;
     }
+
+    .tabs{
+        display: flex !important;
+        flex-direction: column !important;
+        margin: auto !important;
+        text-align: center !important;
+        width: fit-content !important;
+    }
+
+    .tab{
+        margin: 0 auto !important;
+        margin-bottom: 5px !important;
+    }
+
+    
+    #name,
+    #address,
+    #rating,
+    #year,
+    #save,
+    .inputTitle
+    {
+        width: 70% !important;
+    }
+
+    .loginForm{
+        width: 75% !important;
+    }
+
+    .regForm{
+        width: 75% !important;
+    }
+
 }
