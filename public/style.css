@@ -139,7 +139,7 @@ form label{
     .title-item{
         font-size: 24px;
         font-weight: bold;
-        width: 85%;
+        width: 85% !important;
         text-align: center;
         display: block;
         margin: auto;
@@ -147,7 +147,7 @@ form label{
     }
 
     .img-item{
-        width: 90%;
+        width: 95% !important;
     }
 
     .collectionsCol{
@@ -214,4 +214,12 @@ form label{
         margin: 0 auto;
     }
 
+    .searchForMovie{
+        width: 100% !important;
+    }
+
+    .searchMovieInput{
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
 }
