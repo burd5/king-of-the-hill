@@ -3618,15 +3618,14 @@ form label{
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .collectionsCol{
-    display: flex;
-    flex-direction:column;
-    width: 100%;
-    margin: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 90% !important;
   }
 
   .card{
-    width: 90%;
+    width: 90% !important;
   }
 }
