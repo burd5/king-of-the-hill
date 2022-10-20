@@ -201,4 +201,12 @@ form label{
         width: 75% !important;
     }
 
+    .loginTitle{
+        font-size: 38px !important;
+    }
+
+    .registerBlock{
+        margin: 0 auto !important;
+    }
+
 }

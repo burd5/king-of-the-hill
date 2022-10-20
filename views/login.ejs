@@ -14,7 +14,7 @@
 </head>
 <body>
         <div>
-            <h1 class="text-8xl text-center mt-16 mb-10">King of the Hill</h1>
+            <h1 class="loginTitle text-8xl text-center mt-16 mb-10">King of the Hill</h1>
             <% if (locals.messages.errors) { %>
                 <% messages.errors.forEach( el => { %>
                     <div class="block w-fit m-auto alert alert-danger"><%= el.msg %></div>
@@ -33,7 +33,7 @@
                     <input type="password" name="password" placeholder="Password" class="flex my-5 p-3 m-auto w-11/12">
                     <input type="submit" value="Sign-In" class="btn btn-ghost flex my-5 m-auto w-11/12">
                 </form>
-                <span class="block w-fit m-auto">Don't have an account? <a class="m-auto text-primary" id="register" href="/signup">Register</a></span>
+                <span class="registerBlock block w-fit m-auto">Don't have an account? <a class="m-auto text-primary" id="register" href="/signup">Register</a></span>
             </div>
         </div>
 </body>
