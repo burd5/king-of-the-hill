@@ -2,8 +2,14 @@
 
 <img src="kingofthehill.gif" alt="gif of webpage" href="https://kingofthehill.cyclic.app/">
 
+<<<<<<< HEAD
 
 ** WARNING - this repo contains some ugly code. Proceed with caution **
+=======
+```diff
+-** WARNING - this repo contains some ugly code. Proceed with caution **
+```
+>>>>>>> 20f1a821b525182989d49003dbcee8e925b640cb
 
 King of the Hill is a full stack web application that allows user to keep track of the "king" based on their personal interests. The original app was created to keep track of movies, cafes, and diners. Users can add items to their list and see a ranking of where each spot stands. The current "king" is shown on the main page underneath each collection.
 
@@ -19,11 +25,13 @@ session, mongoose, passport, passport-local, bcrypt, validator, morgon, nodemon,
 
 <h1>Optimizations:</h1>
 
-There are many things that still need to be tweaked on this app. The biggest optimization is allowing users to add new collections. Allowing a user to create a new rank list and the criteria to be tracked for each list member. Some other things include:
+There are many things that still need to be tweaked on this app. The biggest optimization is allowing users to add new collections. Allowing a user to create a new rank list and the criteria to be tracked for each list item. Some other things include:
 
 - fixing the client side Javascript (bad baddddd code)
 - adding a modal button for users who add a movie using the API (instead of the current form that is inside the table)
 - getting the Tailwind CSS and Daisy UI installed with the project. Right now I am using CDN script tags (a big no no for production, I know) because after weeks of trying to get it to work, I had to move on. 
+- connecting Google Maps or another API to search for cafes, diners, and other locations
+- allow users to create a profile where they can highlight their 'kings'
 
 <h1>Lessons Learned:</h1>
 
