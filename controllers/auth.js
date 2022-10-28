@@ -80,7 +80,7 @@ module.exports = {
       req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
     
       // Adds user information from sign up form to MongoDB User collection
-      const user = await new User({
+      const user = new User({
         userName: req.body.userName,
         email: req.body.email,
         password: req.body.password
@@ -98,13 +98,17 @@ module.exports = {
         }
         // Saves user in DB and renders dashboard
         user.save((err) => {
-          if (err) { return next(err) }
           req.logIn(user, async (err) => {
-            if (err) {
-              return next(err)
-            }
-          const userItems = await User.find({user: req.user.id})
-          res.render('collections.ejs', {user: userItems, userName: req.user.userName})
+            if (err) { return next(err) }
+            req.flash('success', { msg: 'Success! You are logged in.' })
+            const userItems = await User.find({user: req.user.id})
+            let movies = await Movie.find({user: req.user.id}).sort({rating: '-1'})
+            let cafes = await Cafe.find({user: req.user.id}).sort({rating: '-1'})
+            let diners = await Diner.find({user: req.user.id}).sort({rating: '-1'})
+            let movieKing = movies[0]
+            let dinerKing = diners[0]
+            let cafeKing = cafes[0]
+            res.render('collections.ejs', {user: userItems, userName: req.user.userName, movies: movies, diners: diners, cafes: cafes, movieKing: movieKing, dinerKing: dinerKing, cafeKing: cafeKing})
           })
         })
       })
