@@ -2,15 +2,6 @@
 
 <img src="kingofthehill.gif" alt="gif of webpage" href="https://kingofthehill.cyclic.app/">
 
-<<<<<<< HEAD
-
-** WARNING - this repo contains some ugly code. Proceed with caution **
-=======
-```diff
--** WARNING - this repo contains some ugly code. Proceed with caution **
-```
->>>>>>> 20f1a821b525182989d49003dbcee8e925b640cb
-
 King of the Hill is a full stack web application that allows user to keep track of the "king" based on their personal interests. The original app was created to keep track of movies, cafes, and diners. Users can add items to their list and see a ranking of where each spot stands. The current "king" is shown on the main page underneath each collection.
 
 Link to project: https://kingofthehill.cyclic.app/
